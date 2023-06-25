@@ -121,19 +121,19 @@
     main {
       padding: 20px;
     }
-
-     /* Styling für die Textfelder im Kontaktformular */
+    /* Styling für die Textfelder im Kontaktformular */
     .form-input {
       display: block;
       width: 100%;
       padding: 10px;
-      border: none;
+      border: 1px solid #ccc;
       border-radius: 5px;
       margin-bottom: 15px;
+      font-size: 16px;
     }
-
     .form-input:focus {
       outline: none;
+      border-color: #1abc9c;
       box-shadow: 0 0 5px #1abc9c;
     }
 
@@ -141,17 +141,32 @@
       color: #888;
     }
 
-   .form-button {
+    .form-button {
       background-color: #1abc9c;
       color: #fff;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
     }
 
     .form-button:hover {
       background-color: #16a085;
+    }
+
+    /* Styling für die Icons */
+    .icon {
+      display: inline-block;
+      font-size: 24px;
+      color: #1abc9c;
+      margin-right: 10px;
+    }
+
+        /* Zusätzliche Styling-Änderungen für bessere Lesbarkeit */
+    h1, h2 {
+      color: #333;
     }
 
   </style>
@@ -177,7 +192,8 @@
   </div>
 
   <header>
-    <h1>BAU</h1>
+
+    <h1><i class="fas fa-hammer icon"></i> BAU Handwerker</h1>
   </header>
   <main>
     <section id="home">
@@ -214,5 +230,9 @@
       <p>Disclaimer: <a href="#">Link zu Disclaimer</a></p>
     </section>
   </main>
+    <footer>
+    <p>&copy; 2023 BAU Handwerker. Alle Rechte vorbehalten.</p>
+  </footer>
+
 </body>
 </html>
