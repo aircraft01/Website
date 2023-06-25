@@ -1,113 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ARABAU - Handwerker</title>
+  <title>BAU Handwerker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    .sidebar {
+      background: #f1f1f1;
+      padding: 10px;
     }
-    header {
-      background-color: #333;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      color: #fff;
-      font-size: 36px;
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
       margin: 0;
     }
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      color: #333;
-      font-size: 24px;
-    }
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-    .button {
-      display: inline-block;
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    form {
-      margin-top: 20px;
-    }
-    label {
-      display: block;
+
+    .sidebar ul li {
       margin-bottom: 10px;
     }
-    input[type="text"], input[type="email"], textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+
+    .sidebar ul li a {
+      color: #333;
+      text-decoration: none;
     }
-    textarea {
-      height: 150px;
+
+    .sidebar ul li a:hover {
+      color: #000;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+      <li><a href="#impressum">Impressum</a></li>
+    </ul>
+  </div>
   <header>
-    <h1>ARABAU - Handwerker</h1>
+    <h1>BAU</h1>
   </header>
-
-  <!-- Main Content -->
   <main>
-    <!-- Home Section -->
     <section id="home">
-      <h2>Willkommen bei ARABAU - Ihrem Handwerker!</h2>
-      <p>Wir bieten qualitativ hochwertige Handwerksdienstleistungen in Deutschland.</p>
-      <p>Um einen Termin zu vereinbaren, füllen Sie bitte das Formular aus:</p>
-      <form action="mailto:khachatur@gmx.de" method="post" enctype="text/plain">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-  
-        <label for="email">E-Mail:</label>
-        <input type="email" id="email" name="email" required><br><br>
-  
-        <label for="date">Wunschdatum:</label>
-        <input type="text" id="date" name="date" required><br><br>
-  
-        <label for="service">Handwerksdienstleistung:</label>
-        <textarea id="service" name="service" required></textarea><br><br>
-  
-        <input type="submit" value="Anfrage absenden" class="button">
-      </form>
+      <h2>Willkommen bei BAU Handwerker</h2>
+      <p>Wir bieten professionelle Handwerksdienstleistungen für Ihre Bedürfnisse.</p>
+      <a href="#contact" class="btn">Termin vereinbaren</a>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-      <h2>Unsere Dienstleistungen</h2>
-      <ul>
-        <li>Renovierungen</li>
-        <li>Malerarbeiten und Tapezieren</li>
-        <li>Fliesenverlegung</li>
-        <li>Sanitärinstallationen</li>
-        <li>Elektroinstallationen</li>
-        <li>Tischlerarbeiten</li>
-      </ul>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Kontaktieren Sie uns</h2>
+      <form action="mailto:handwerker@gmx.de" method="POST" enctype="text/plain">
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="date">Wunschdatum:</label>
+        <input type="date" id="date" name="date" required>
+        <label for="service">Handwerksdienstleistung:</label>
+        <input type="text" id="service" name="service" required>
+        <input type="submit" value="Absenden">
+      </form>
     </section>
 
     <!-- Impressum Section -->
     <section id="impressum">
       <h2>Impressum</h2>
-      <p>ARABAU Handwerker</p>
+      <p>BAU Handwerker</p>
       <p>Musterstraße 123, 12345 Musterstadt</p>
-      <!-- <p>Telefon: 01234-56789</p> 
-      <p>E-Mail: khachatur@gmx.de</p> -->
+      <p>Telefon: 01234-56789</p>
+      <p>E-Mail: handwerker@gmx.de</p>
       <p>Datenschutzbestimmungen: <a href="#">Link zu Datenschutzbestimmungen</a></p>
       <p>Disclaimer: <a href="#">Link zu Disclaimer</a></p>
     </section>
