@@ -193,18 +193,15 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-      <h2>Kontaktieren Sie uns</h2>
-      <form action="mailto:handwerker@gmx.de" method="POST" enctype="text/plain">
-        <label for="email">E-Mail:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="date">Wunschdatum:</label>
-        <input type="date" id="date" name="date" required>
-        <label for="service">Handwerksdienstleistung:</label>
-        <input type="text" id="service" name="service" required>
-        <input type="submit" value="Absenden">
-      </form>
-    </section>
+  <section id="contact">
+    <h2>Kontaktieren Sie uns</h2>
+    <form>
+      <input type="text" id="name" name="name" class="form-input" placeholder="Ihr Name" required>
+      <input type="email" id="email" name="email" class="form-input" placeholder="Ihre E-Mail-Adresse" required>
+      <textarea id="message" name="message" class="form-input" placeholder="Ihre Nachricht" required></textarea>
+      <button type="submit" class="form-button">Absenden</button>
+    </form>
+  </section>
 
     <!-- Impressum Section -->
     <section id="impressum">
