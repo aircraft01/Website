@@ -156,7 +156,7 @@
       background-color: #16a085;
     }
 
-     /* Styling für den Terminkalender */
+   /* Styling für den Terminkalender */
     .calendar {
       position: relative;
     }
@@ -170,7 +170,8 @@
       color: #1abc9c;
       cursor: pointer;
     }
-    .datepicker {
+
+  .datepicker {
       display: none;
       position: absolute;
       top: 100%;
@@ -210,10 +211,25 @@
   </script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script>
-    flatpickr(".datepicker", {
-      minDate: "today"
+    document.addEventListener("DOMContentLoaded", function() {
+      flatpickr(".datepicker", {
+        minDate: "today"
+      });
+  
+      var calendarIcon = document.querySelector(".calendar-icon");
+      var datepicker = document.querySelector(".datepicker");
+  
+      calendarIcon.addEventListener("click", function() {
+        datepicker.classList.toggle("active");
+      });
+  
+      document.addEventListener("click", function(event) {
+        if (!datepicker.contains(event.target) && !calendarIcon.contains(event.target)) {
+          datepicker.classList.remove("active");
+        }
+      });
     });
- </script>
+  </script>
 </head>
   
 <body>
@@ -247,21 +263,20 @@
     </section>
 
     <!-- Contact Section -->
- <section id="contact">
+  <section id="contact">
     <h2>Kontaktieren Sie uns</h2>
     <form>
       <input type="text" id="name" name="name" class="form-input" placeholder="Ihr Name" required>
       <input type="email" id="email" name="email" class="form-input" placeholder="Ihre E-Mail-Adresse" required>
       <textarea id="message" name="message" class="form-input" placeholder="Ihre Nachricht" required></textarea>
       <div class="calendar">
-        <input type="text" id="date" name="date" class="form-input" placeholder="Wunschtermin" required>
+        <input type="text" id="date" name="date" class="form-input datepicker" placeholder="Wunschtermin" required>
         <i class="far fa-calendar-alt calendar-icon"></i>
         <div class="datepicker"></div>
       </div>
       <button type="submit" class="form-button">Absenden</button>
     </form>
   </section>
-
 
     <!-- Impressum Section -->
     <section id="impressum">
