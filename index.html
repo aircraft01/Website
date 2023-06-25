@@ -107,15 +107,33 @@
       text-decoration: none;
     }
   </style>
+   <script>
+    function toggleMenu() {
+      var menuToggle = document.getElementById('menu-toggle');
+      var sidebar = document.getElementById('sidebar');
+
+      if (menuToggle.checked) {
+        sidebar.classList.add('expanded');
+      } else {
+        sidebar.classList.remove('expanded');
+      }
+    }
+  </script>
 </head>
+  
 <body>
-  <div class="sidebar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#contact">Kontakt</a></li>
-      <li><a href="#impressum">Impressum</a></li>
+ <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="menu-toggle-label">
+    Menü <i class="fas fa-bars menu-toggle-icon"></i>
+  </label>
+  <div class="sidebar" id="sidebar">
+    <ul class="menu-list">
+      <li class="menu-list-item"><a href="#home">Home</a></li>
+      <li class="menu-list-item"><a href="#contact">Kontakt</a></li>
+      <li class="menu-list-item"><a href="#impressum">Impressum</a></li>
     </ul>
   </div>
+
   <header>
     <h1>BAU</h1>
   </header>
